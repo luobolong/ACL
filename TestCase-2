@@ -1,0 +1,20 @@
+net user admin kkan*h2
+net group Administrators
+net group Administrators admin
+net group Users
+login admin kkan*h2
+net user john asss
+net user snow sssa
+net group Stuff
+net group Stuff john
+net group Stuff snow
+logout
+login joh asss
+login john asss
+logout
+login admin kkan*h2
+del user john
+logout
+login john asss
+logout
+end

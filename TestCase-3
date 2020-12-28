@@ -1,0 +1,65 @@
+net user admin h4cks_*&/
+net group Administrators
+net group Administrators admin
+net group Users
+login admin h4cks_*&/
+uac Always
+net user john &DS4Hh
+logout
+login john &DS4Hh
+uac Never
+program create accounts.txt
+program create accountNames.txt
+program write accountNames.txt John
+read accountNames.txt
+logout
+login admin H4cks_*&/
+net group Testers
+login admin h4cks_*&/
+net group Testers
+net group Testers john
+program create log.txt
+yes
+program write log.txt Today was a good day.
+yes
+net user rob 237hd_.L?
+net group Testers rob
+net group Programmers
+net user veronica 47*3nd_)/d\
+net group Programmers veronica
+logout
+login veronica 47*3nd_)/d\
+uac Always
+create script.sh
+write script.sh #!/bin/bash
+program write script.sh echo count to 4:
+yes
+xcacls script.sh /E Testers:X
+logout
+login rob 237hd_.L?
+uac Never
+program read script.sh
+program execute script.sh
+logout
+login veronica 47*3nd_)/d\
+write script.sh COUNTER=0
+write script.sh while [  $COUNTER -lt 5 ]; do
+write script.sh echo $COUNTER
+write script.sh let COUNTER=COUNTER+1
+write script.sh done
+read script.sh
+program write script.sh echo ...Done!
+yes
+logout
+login john &DS4Hh
+program execute script.sh
+logout
+login admin h4cks_*&/
+write accountNames.txt Rob
+write accountNames.txt Veronica
+write log.txt Finished adding account names.
+read log.txt
+program read accountNames.txt
+yes
+logout
+end
