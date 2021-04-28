@@ -17,7 +17,7 @@ void printLog() {
 
 int main(int argc, char const *argv[]) {
     if (argc < 2) { // 检查参数中是否有文件名，否则出错
-		log("Error: Please specify a filename.\nUse the format './access filename'");
+		log("Error: Please specify a filename.\nUse the format './demo filename'");
         printLog();
 		return 1;
 	} else {
